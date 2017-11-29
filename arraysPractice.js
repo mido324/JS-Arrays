@@ -30,10 +30,10 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
 function looper(family) {
   for(var i = 0; i < family.length; i++) {
-    //alert (family[i]);
+    alert (family[i]);
   }
 }
-looper(family);
+
 
 
   //Code Here
@@ -60,18 +60,19 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
 
   //Code Here
-
+// if (numbersArray[i] % 2 === 0){
+// evenNumsOddNums[0].push(numbersArray[i])
 
   function evenFinder(nums){
     for (var i = 0; i < nums.length; i++) {
-        // here
-        while (arr[i] % 2) {
+        
+        if(nums[i] % 2 !== 0) {
             nums.splice(i, 1);
         }
     }
     return nums;
 
-
+  }
 
   
 
@@ -98,7 +99,19 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 
   //Code Here
-
+function divider(numbersArray) {
+let evenNumsOddNums = [
+  [], []
+]
+  for (var i = 0; i < numbersArray.length; i++){    
+     if (numbersArray[i] % 2=== 0){ 
+             evenNumsOddNums[0].push(numbersArray[i])    
+             }
+              else {
+evenNumsOddNums[1].push(numbersArray[i])     }
+   }
+    return evenNumsOddNums;
+}
 
 //Next Problem
 
